@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hutu-ai
+#    AI配置
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: deepseek-r1:7b
