@@ -35,6 +35,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        ollama的依赖 此时yaml里面配置的就是ollama的配置，chatModel 就是ollama的chatModel-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-ollama</artifactId>
@@ -48,7 +49,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.38</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
