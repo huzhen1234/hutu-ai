@@ -8,24 +8,11 @@
         <version>3.4.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.hutu.com</groupId>
+    <groupId>com.hutu</groupId>
     <artifactId>hutu-ai</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hutu-ai</name>
     <description>hutu-ai</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>17</java.version>
         <spring-ai.version>1.0.0</spring-ai.version>
