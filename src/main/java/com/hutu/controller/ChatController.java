@@ -2,7 +2,7 @@ package com.hutu.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.http.MediaType;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
@@ -24,11 +24,16 @@ public class ChatController {
 
     /**
      * 非阻塞式
+     * 添加记忆功能
      * @param prompt
      * @return
      */
     @PostMapping(value = "/chat", produces = "text/html;charset=utf-8")
-    public Flux<String> chatStream(String prompt) {
-        return chatClient.prompt().user(prompt).stream().content();
+    public Flux<String> chatStream(String prompt,@RequestParam("chatId") String chatId) {
+        return chatClient.prompt()
+                .user(prompt)
+                .advisors(advisorSpec -> advisorSpec.param(ChatMemory.CONVERSATION_ID, chatId))
+                .stream()
+                .content();
     }
 }
