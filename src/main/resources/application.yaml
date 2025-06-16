@@ -7,6 +7,11 @@ spring:
       base-url: http://192.168.1.19:11434
       chat:
         model: deepseek-r1:7b
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.19:3306/spring_ai?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
 # SimpleLoggerAdvisor 日志
 logging:
   level:
